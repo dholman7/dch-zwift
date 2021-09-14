@@ -48,11 +48,4 @@ public class Events {
         Assert.assertTrue(driver.getTitle().contains("The at Home Cycling & Running Virtual Training App"), "Actual: " + driver.getTitle());
     }
 
-    private void waitForEventsLoad() {
-        try {
-            TimeUnit.SECONDS.sleep(3);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
 }

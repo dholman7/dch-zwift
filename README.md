@@ -1,5 +1,5 @@
 # DCH Zwift Selenium Example
-TestNG test suites can be run from the .xml files located in the test/suite directory. see zwift-regression.xml for example.
+TestNG test suites can be run from the .xml files located in the test/suite directory. See zwift-regression.xml for example.
 
 ## Requirements & Setup
 - JAVA JDK 1.8 or higher.
@@ -8,8 +8,8 @@ TestNG test suites can be run from the .xml files located in the test/suite dire
 ex. ```plugins {
   id 'visual-studio'
   }```
-- If your IDE requires a local gradle installation, please see https://gradle.org/install/
-- Running from command-line: Can be accomplished by modifying the gradle.build file but not featured in this demo. 
+- If your IDE requires a local gradle installation or if you want to run gradle from a command-line, please see https://gradle.org/install/
+- Running from command-line: From project's root directory: `gradle clean test`
 
 
 ## TestNG Parameters

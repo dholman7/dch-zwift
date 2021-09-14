@@ -22,7 +22,7 @@ repositories {
 }
 
 wrapper() {
-    gradleVersion = '4.10'
+    gradleVersion = '7.2'
 }
 
 dependencies {
@@ -43,7 +43,6 @@ dependencies {
 }
 
 allure {
-
     version = "2.9.0"
     autoconfigure = true
     aspectjweaver = true
@@ -53,18 +52,23 @@ allure {
         autoconfigure = true
         aspectjweaver = true
     }
-
 }
 
-test {
-    useTestNG()
-}
-
-task deleteResults(type: Delete) {
+task deleteAllure(type: Delete) {
     delete 'allure-results'
 }
 
-task copyHistory(type: Copy) {
-    from 'reports/allure-report/history'
+task cleanAllure(type: Delete) {
+    delete fileTree('allure-results') {
+        exclude 'history/**'
+        include '**/*.json'
+        include '*attachment'
+    }
+}
+
+task createHistory(type: Copy) {
+    from 'allure-results/'
+    include '*.json'
+    include '*attachment'
     into 'allure-results/history'
 }

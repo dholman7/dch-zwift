@@ -13,7 +13,6 @@ import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import java.io.File;
@@ -74,12 +73,12 @@ public class WebDriverSetup extends Base {
      *
      * @throws URISyntaxException Bad String or path to a file.
      */
-    private void chrome() throws URISyntaxException {
+    private void chrome() throws URISyntaxException, NullPointerException {
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("chrome.switches", "--disable--extensions");
         options.addArguments("window.size", WINDOW_RESOLUTION);
-        options.addArguments("--disable-infobars");
+        options.addArguments("disable-infobars");
 
         // Gets browser console and network logs - does not work with ChromeOptions
         DesiredCapabilities capabilities = DesiredCapabilities.chrome();

@@ -23,7 +23,6 @@ import java.util.logging.Level;
 /**
  * Base class that will run with all WebDriver tests.
  * Browser and URL are set by the testng.xml file (test.suite.zwift-regression.xml).
- * If environment is set to `LOCAL` - local drivers will be used and no Selenium Grid is needed.
  */
 public class WebDriverSetup extends Base {
 

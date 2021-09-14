@@ -1,5 +1,9 @@
-# Object file
-*.o
-
-# Ada Library Information
-*.ali
+# ignored files
+.idea/
+build/
+test-output/
+allure-results/
+.gradle/
+/logs
+/screenshots
+/out/

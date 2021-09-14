@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Zwift Regression" thread-count="2" parallel="false">
+
+    <parameter name="environment" value="PROD"/>
+    <parameter name="webdriver" value="LOCAL"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="config" value="test/config.properties"/>
+    <parameter name="headless" value="false"/>
+
+    <listeners>
+        <listener class-name="com.zwift.framework.listeners.SeleniumListener"/>
+    </listeners>
+
+    <test name="Home Page Test">
+        <classes>
+            <class name="test.HomePageTest"/>
+        </classes>
+    </test>
+    <test name="Events Page Test">
+        <classes>
+            <class name="test.EventsPageTest"/>
+        </classes>
+    </test>
+</suite>

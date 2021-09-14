@@ -1,5 +1,5 @@
 # DCH Zwift Selenium Example
-TestNG test suites can be run from the .xml files located in the test/suite directory. See zwift-regression.xml for example.
+TestNG test suites can be run from the .xml files located in the test/suite directory. See `test/zwift-regression.xml` for example.
 
 ## Requirements & Setup
 - JAVA JDK 1.8 or higher.

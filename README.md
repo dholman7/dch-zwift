@@ -10,7 +10,7 @@ ex. ```plugins {
   }```
 
 ## Running from Command-line
-- Option 1: Run using the Gradle wrapper included in the build. Run `./gradlew test` (Mac/Linux) or `gradlew.bat` (Windows)
+- Option 1: Run using the Gradle wrapper included in the build. Run `./gradlew test` (Mac/Linux) or `gradlew.bat test` (Windows)
 - Option 2: Download & Install Gradle version 6.9 https://gradle.org/next-steps/?version=6.9.1&format=bin. 
   Please see https://gradle.org/install/ for more info.
 

@@ -8,9 +8,17 @@ TestNG test suites can be run from the .xml files located in the test/suite dire
 ex. ```plugins {
   id 'visual-studio'
   }```
-- If your IDE requires a local gradle installation or need to run gradle from command-line install version 6.9, please see https://gradle.org/install/
-- Running from command-line: From project's root directory: `gradle clean test` (Not Recommended)
 
+## Running from Command-line
+- Option 1: Run using the Gradle wrapper included in the build. Run `./gradlew test` (Mac/Linux) or `gradlew.bat` (Windows)
+- Option 2: Download & Install Gradle version 6.9 https://gradle.org/next-steps/?version=6.9.1&format=bin. 
+  Please see https://gradle.org/install/ for more info.
+
+`$ mkdir /opt/gradle`  
+`$ unzip -d /opt/gradle gradle-6.9-bin.zip`  
+`$ ls /opt/gradle/gradle-6.9`    
+Add Gradle to your classpath `export PATH=$PATH:/opt/gradle/gradle-6.9/bin`  
+Running from command-line: From project's root directory: `gradle clean test`  
 
 ## TestNG Parameters
 This framework uses TestNG. To run tests a TestNG xml file must be executed. `testng.xml`
@@ -27,7 +35,9 @@ To run tests in a local browser: change `environment` parameter in `zwift-regres
 
 # Generating Allure Report
 Prereq - In order to generate Allure Reports you must install Allure locally. See https://docs.qameta.io/allure/#_installing_a_commandline
-- From the project directory: `allure serve allure-results`
+- Generate and Serve report - From the project's root directory:  
+  If running from command-line: `allure serve build/allure-results`  
+  If running from IDE: `allure serve allure-results`
 - To maintain test history, execute gradle tasks `gradle createHistory cleanAllure` (should be executed after each run)
 - Attachments & Test Steps require JVM parameter: `-javaagent:"lib/aspectjweaver-1.9.6.jar"`
   

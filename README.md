@@ -1,5 +1,5 @@
 # DCH Zwift Selenium Example
-TestNG test suites can be run from the .xml files located in the test/suite directory. See zwift-regression.xml for example.
+TestNG test suites can be run from the .xml files located in the test/suite directory. See `test/zwift-regression.xml` for example.
 
 ## Requirements & Setup
 - JAVA JDK 1.8 or higher.
@@ -28,8 +28,8 @@ To run tests in a local browser: change `environment` parameter in `zwift-regres
 # Generating Allure Report
 Prereq - In order to generate Allure Reports you must install Allure locally. See https://docs.qameta.io/allure/#_installing_a_commandline
 - From the project directory: `allure serve allure-results`
-- To maintain test history, gradle tasks `gradle createHistory cleanAllure` must be executed after each run.
-- Attachments & Test Steps require JVM parameter `-javaagent:"lib/aspectjweaver-1.9.6.jar`
+- To maintain test history, execute gradle tasks `gradle createHistory cleanAllure` (should be executed after each run)
+- Attachments & Test Steps require JVM parameter: `-javaagent:"lib/aspectjweaver-1.9.6.jar"`
   
 - See allure_example folder for screenshots of the report.
 

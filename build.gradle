@@ -54,6 +54,14 @@ allure {
     }
 }
 
+test {
+    useTestNG() {
+        dependsOn cleanTest
+        useDefaultListeners = true
+        suites "src/test/java/suite/zwift-regression.xml"
+    }
+}
+
 task deleteAllure(type: Delete) {
     delete 'allure-results'
 }
